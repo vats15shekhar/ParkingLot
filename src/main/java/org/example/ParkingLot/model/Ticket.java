@@ -2,11 +2,19 @@ package org.example.ParkingLot.model;
 
 public class Ticket extends BaseModel{
     private String EntryTime;
-    private Vehicle Vehicle;
+    private Vehicle vehicle;
     private ParkingFloor parkingFloor;
     private ParkingSpot parkingSpot;
     private ParkingLot parkingLot;
     private Operator operator;
+    private EntryGate entryGate;
+
+    public Ticket(Vehicle vehicle, EntryGate entryGate) {
+        this.vehicle = vehicle;
+        this.entryGate = entryGate;
+    }
+    public Ticket()
+    {}
 
     public void setEntryTime(String EntryTime) {
         this.EntryTime = EntryTime;
@@ -14,11 +22,11 @@ public class Ticket extends BaseModel{
     public String getEntryTime() {
         return EntryTime;
     }
-    public void setVehicle(Vehicle Vehicle) {
-        this.Vehicle = Vehicle;
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
     public Vehicle getVehicle() {
-        return Vehicle;
+        return vehicle;
     }
     public void setParkingFloor(ParkingFloor parkingFloor) {
         this.parkingFloor = parkingFloor;
@@ -43,5 +51,11 @@ public class Ticket extends BaseModel{
      }
      public Operator getOperator() {
         return operator;
+     }
+     public void setEntryGate(EntryGate entryGate) {
+        this.entryGate = entryGate;
+     }
+     public EntryGate getEntryGate() {
+        return entryGate;
      }
 }

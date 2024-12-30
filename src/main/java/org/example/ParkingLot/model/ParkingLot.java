@@ -20,5 +20,11 @@ public class ParkingLot extends BaseModel{
     public String getName() {
         return name;
     }
+    public void setParkingFloors(List<ParkingFloor> parkingFloors) {
+        this.parkingFloors = parkingFloors;
+    }
+    public List<ParkingFloor> getParkingFloors() {
+        return parkingFloors;
+    }
 }
 
